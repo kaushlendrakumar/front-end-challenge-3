@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html ng-app="App">
+	<head>
+		<title>Commenting</title>
+		<!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../assets/css/index.css">
+	</head>
+	<body ng-controller="Ctrl">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="nav">
+					ModeStreet 
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="container-wrapper">
+			<div class="row">
+				<div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 each-post-conatiner" ng-repeat="item in appdata.data.posts">
+					<div class="postedby-img">
+						<img ng-src="../assets/img/{{item.userprofile}}" alt="">
+					</div>
+					<div class="postedby-name">
+						{{item.postedby}}
+						<div class="time">{{item.postedtime}} </div>
+					</div>
+					<div class="col-xs-12 post-data">
+						{{item.postText}}
+						<div class="img-wrapper" ng-if="item.postimg">
+							<img ng-src="../assets/img/{{item.postimg}}" alt="">
+						</div>
+					</div>
+					<div class="col-xs-12 comments-wrapper">
+						<div class="Comment-h">Comments</div>
+						<div class="clearfix">
+							<ul class="clearfix firstleve-comment" ng-repeat="item in item.commentsArray">
+								<li class="clearfix">
+									<div class="clearfix">
+										<div class="commentby-img">
+											<img ng-src="../assets/img/{{item.userprofile}}" alt="">
+										</div>
+										<div class="commentby-nameMsg">
+											<div class="msg-name">
+												<span class="name">{{item.commentuser}}</span>
+												<span class="msg">
+													{{item.comment}}
+												</span>
+												<div class="deletecomment" ng-click="deletecomment($index)">Delete</div>
+											</div>
+										</div>
+									</div>
+									<div class="clearfix action-wrapper">
+										<div class="clearfix">
+											<div class="reply" style="padding-left:40px;" ng-click="activecommentbox()">Reply</div>
+										</div>
+									</div>
+									<comment></comment>
+									<div class="clearfix action-wrapper" style="padding-left:40px;" ng-if="item.commentboxshow">
+										<div class="sub-comment-container">
+											<div class="subcommentby-img">
+												<img src="../assets/img/avtar.jpg" alt="">
+											</div>
+											<input type="text" class="commetbox" ng-model="item.newcomment">
+											<button class="btn btn-primary pull-right" ng-click="commentbtn()">Send</button>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="col-xs-12 comment-box-conatiner">
+								<div class="commentby-img">
+									<img src="../assets/img/avtar.jpg" alt="">
+								</div>
+								<textarea class="commetbox" ng-model="item.newcomment"></textarea>
+								<button class="btn btn-primary btn-sm pull-right" ng-click="commentbtn()">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../assets/js/angular.min.js"></script>
+		<script type="text/javascript" src="../assets/js/index.js"></script>
+	</body>
+</html>

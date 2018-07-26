@@ -1,0 +1,93 @@
+{
+	"status" : 200,
+	"msg" : "succes",
+	"selfname" : "Aditiya",
+	"posts" : [
+		{
+			"postedby" : "Postedby User 1",
+			"postedtime" : "yesterday at 13:20",
+			"postText" : "This is one post",
+			"postimg" : "postimg.jpg",
+			"userprofile" : "avtar.jpg",
+			"newcomment" : "",
+			"commentsArray" :[
+				{
+	    			"comment" : "Good Morning",
+	    			"commentuser" : "Ramesh",
+	    			"newcomment" : "",
+	    			"userprofile" : "avtar.jpg",
+	    			"commentboxshow" : false
+	    		},
+	    		{
+	    			"comment" : "Good Noon",
+	    			"commentuser" : "Prithvi",
+	    			"newcomment" : "",
+	    			"userprofile" : "avtar.jpg",
+	    			"commentboxshow" : false,
+	    			"commentsArray" :[
+						{
+			    			"comment" : "Good Morning",
+			    			"commentuser" : "Vijay",
+			    			"newcomment" : "",
+			    			"userprofile" : "avtar.jpg",
+			    			"commentboxshow" : false
+			    		},
+			    		{
+			    			"comment" : "Good Morning",
+			    			"commentuser" : "Kishore",
+			    			"newcomment" : "",
+			    			"userprofile" : "avtar.jpg",
+			    			"commentboxshow" : false
+			    		}
+					]
+	    		}
+			]
+		},
+		{
+			"postedby" : "Postedby User 2",
+			"postedtime" : "yesterday at 12:20",
+			"postText" : "This is second post",
+			"userprofile" : "avtar.jpg",
+			"newcomment" : "",
+			"commentsArray" :[
+				{
+	    			"comment" : "Good Morning",
+	    			"commentuser" : "Vicky",
+	    			"newcomment" : "",
+	    			"userprofile" : "avtar.jpg",
+	    			"commentboxshow" : false
+	    		},
+	    		{
+	    			"comment" : "Good Morning",
+	    			"commentuser" : "Rohit",
+	    			"newcomment" : "",
+	    			"userprofile" : "avtar.jpg",
+	    			"commentboxshow" : false,
+	    			"commentsArray" :[
+						{
+			    			"comment" : "Good Morning",
+			    			"commentuser" : "Rahul",
+			    			"newcomment" : "",
+			    			"userprofile" : "avtar.jpg",
+			    			"commentboxshow" : false
+			    		}
+			    	]
+	    		},
+	    		{
+	    			"comment" : "Good Morning",
+	    			"commentuser" : "Ashish",
+	    			"newcomment" : "",
+	    			"userprofile" : "avtar.jpg",
+	    			"commentboxshow" : false
+	    		},
+	    		{
+	    			"comment" : "Good Morning",
+	    			"commentuser" : "Umesh",
+	    			"newcomment" : "",
+	    			"userprofile" : "avtar.jpg",
+	    			"commentboxshow" : false
+	    		}
+			]
+		}
+	]
+}
